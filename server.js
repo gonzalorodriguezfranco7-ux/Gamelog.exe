@@ -3,7 +3,7 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
-const crypto = require("crypto");
+const crypto = require("crypto"); const QRCode = require("qrcode"); const AVATARS = ["🤖", "👾", "🐱", "🦊", "🐸", "🦖"];
 
 const PORT = Number(process.env.PORT || 10000);const INDEX = path.join(__dirname, "public", "public", "public", "public", "index.html", "l");
 const ROUND_MS = 15000;
@@ -93,7 +93,7 @@ function playersSorted() {
     const answer = qIndex >= 0 ? p.answers[qIndex] : null;
     return {
       id: p.id,
-      name: p.name,
+      name: p.name, avatar: p.avatar || AVATARS[0],
       score: p.score,
       answered: answer !== null && answer !== undefined,
       choice: room.phase === "review" || room.phase === "done" ? answer : null,
@@ -192,11 +192,11 @@ const server = http.createServer(async function(req, res) {
     });
     if (duplicate) return json(res, 409, { error: "Ese nombre ya está en la sala. Prueba con otro." });
     const id = crypto.randomBytes(16).toString("hex");
-    room.players.set(id, { id: id, name: name, score: 0, answers: [], roundPoints: [] });
-    return json(res, 201, { code: room.code, playerId: id, name: name });
+    room.players.set(id, { id: id, name: name, avatar: AVATARS.includes(data.avatar) ? data.avatar : AVATARS[0], score: 0, answers: [], roundPoints: [] });
+    return json(res, 201, { code: room.code, playerId: id, name: name, avatar: AVATARS.includes(data.avatar) ? data.avatar : AVATARS[0] });
   }
 
-  if (req.method === "GET" && route === "/api/state") {
+  if (req.method === "GET" && route === "/api/qr") { const code = url.searchParams.get("code"); if (!room || code !== room.code || room.phase === "done") return json(res, 404, { error: "La sala ya no está disponible." }); try { const invite = "https://reinicio-pc-en-apuros.onrender.com/?codigo=" + room.code; const svg = await QRCode.toString(invite, { type: "svg", errorCorrectionLevel: "M", margin: 2, width: 200, color: { dark: "#102c25", light: "#f2f5ec" } }); res.writeHead(200, { "Content-Type": "image/svg+xml; charset=utf-8", "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff" }); return res.end(svg); } catch (_) { return json(res, 500, { error: "No se pudo crear el código QR." }); } } if (req.method === "GET" && route === "/api/state") {
     closeRoundIfNeeded();
     if (!room || url.searchParams.get("code") !== room.code) return json(res, 404, { error: "La sala ya no está disponible." });
     const role = url.searchParams.get("role");
