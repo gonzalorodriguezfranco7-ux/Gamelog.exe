@@ -121,7 +121,7 @@ function updateClock(){
  var left=Math.max(0,state.deadline-Date.now()),seconds=Math.ceil(left/1000);
  ["host-clock","player-clock"].forEach(function(id){var t=document.getElementById(id),f=document.getElementById(id+"-fill");if(t)t.textContent=seconds+" s";if(f)f.style.width=Math.max(0,left/150)+"%"});
 }
-function params(){
+function stateParams(){
  var p=new URLSearchParams({code:session.code,role:session.role});
  if(session.role==="host")p.set("key",session.key);else p.set("playerId",session.playerId);
  return p.toString();
@@ -130,7 +130,7 @@ async function poll(){
  if(!session)return;
  var thisSession=session;
  try{
-  var next=await api("/api/state?"+params());
+  var next=await api("/api/state?"+stateParams());
   if(session!==thisSession)return;
   state=next;var sig=JSON.stringify(next);
   if(sig!==signature){signature=sig;render()}else updateClock();
