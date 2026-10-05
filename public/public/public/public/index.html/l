@@ -28,7 +28,7 @@ input:focus{border-color:#58a879;box-shadow:0 0 0 3px #58a87920}.code-input{font
 .card{padding:clamp(21px,4vw,32px);border-radius:20px}.room-head,.q-meta,.round-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .tag{border-radius:999px;background:#e1eee2;color:#4d7258;padding:7px 10px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:850}
 .pin{font-size:clamp(53px,12vw,83px);font-variant-numeric:tabular-nums;font-weight:900;letter-spacing:.16em;text-align:center;color:#173d2c;padding:16px 0 7px}
-.invite{text-align:center;background:#f8faf5;border:1px dashed #a8c0ad;border-radius:13px;padding:13px;margin:6px 0 17px}.invite p{font-size:11px;color:#61766a;margin:0 0 7px}.linkline{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;font-size:13px;font-weight:800;color:#246044;overflow-wrap:anywhere}.copy{border:1px solid #cfddce;background:#fff;color:#42664d;border-radius:8px;padding:5px 9px;font-size:10px;font-weight:800}
+.invite{text-align:center;background:#f8faf5;border:1px dashed #a8c0ad;border-radius:13px;padding:13px;margin:6px 0 17px}.invite p{font-size:11px;color:#61766a;margin:0 0 7px}.linkline{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;font-size:13px;font-weight:800;color:#246044;overflow-wrap:anywhere}.copy{border:1px solid #cfddce;background:#fff;color:#42664d;border-radius:8px;padding:5px 9px;font-size:10px;font-weight:800}.qr-row{display:flex;align-items:center;justify-content:center;gap:11px;margin-top:12px}.qr-code{width:132px;height:132px;border:5px solid #fff;border-radius:10px;background:#fff}.avatar{animation:avatar-float 2.4s ease-in-out infinite}.person:nth-child(3n + 2) .avatar{animation-delay:.3s}.person:nth-child(3n) .avatar{animation-delay:.6s}@keyframes avatar-float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-4px) rotate(5deg)}}.avatar-picker{display:grid;gap:7px}.avatar-options{display:flex;gap:8px;flex-wrap:wrap}.avatar-option{position:relative;cursor:pointer}.avatar-option input{position:absolute;width:1px;height:1px;opacity:0}.avatar-option span{width:39px;height:39px;border:1px solid #dbe3d9;border-radius:11px;background:#fbfcf8;display:grid;place-items:center;font-size:20px;animation:avatar-float 2.4s ease-in-out infinite}.avatar-option:nth-child(even) span{animation-delay:.35s}.avatar-option input:checked+span{border-color:#589a6e;background:#e4f2e5;box-shadow:0 0 0 3px #589a6e24}.avatar-option input:focus-visible+span{outline:3px solid #58a879}
 .list{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:7px}.person{border:1px solid #e0e6dd;background:#fbfcf8;border-radius:10px;padding:9px 10px;display:flex;align-items:center;gap:8px;font-size:11px;font-weight:750}.avatar{width:24px;height:24px;border-radius:8px;background:#dcecdf;color:#39724d;display:grid;place-items:center;flex:none}
 .row{display:flex;align-items:center;justify-content:space-between;gap:11px;margin:13px 0 9px}.count{color:#536b5b;font-weight:800;font-size:11px}.hint{font-size:10px;line-height:1.5;color:#728277}
 .actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px}
@@ -40,7 +40,7 @@ input:focus{border-color:#58a879;box-shadow:0 0 0 3px #58a87920}.code-input{font
 .choice:hover:not(:disabled){border-color:#7eb891;background:#eff8f0}.choice.correct,.choice.selected{border-color:#589a6e;background:#e4f2e5}.choice.wrong{border-color:#e4a192;background:#fff0ec}
 .letter{width:25px;height:25px;flex:none;border-radius:8px;background:#e9efe7;color:#476650;display:grid;place-items:center;font-size:10px;font-weight:900}
 .feedback{margin-top:13px;padding:12px 13px;border-radius:10px;background:#e5f2e6;color:#315f3f;font-size:11px;line-height:1.55}.feedback strong{font-weight:900}
-.layout{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;align-items:start}.scores{border:1px solid #ffffff16;background:#1b3d32;border-radius:15px;padding:15px}.scores-head{display:flex;align-items:center;justify-content:space-between;color:#f1f6ee;font-size:13px;font-weight:850;margin-bottom:10px}.scores-head small{font-size:9px;color:#a9bcae}.score-list{display:grid;gap:6px}.score{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:7px;align-items:center;background:#ffffff09;border-radius:8px;padding:8px;color:#e7efe6;font-size:10px}.rank{color:#abd0ad;font-weight:900}.pname{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.pts{color:#c9eea0;font-weight:850;font-variant-numeric:tabular-nums}
+.layout{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;align-items:start}.scores{border:1px solid #ffffff16;background:#1b3d32;border-radius:15px;padding:15px}.scores-head{display:flex;align-items:center;justify-content:space-between;color:#f1f6ee;font-size:13px;font-weight:850;margin-bottom:10px}.scores-head small{font-size:9px;color:#a9bcae}.score-list{display:grid;gap:6px}.score{display:grid;grid-template-columns:20px 24px minmax(0,1fr) auto;gap:7px;align-items:center;background:#ffffff09;border-radius:8px;padding:8px;color:#e7efe6;font-size:10px}.rank{color:#abd0ad;font-weight:900}.pname{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.pts{color:#c9eea0;font-weight:850;font-variant-numeric:tabular-nums}
 .wait{text-align:center;padding:26px 10px}.wait-icon,.result-icon{width:65px;height:65px;margin:0 auto 14px;border-radius:22px;background:#dceede;color:#3b8155;display:grid;place-items:center;font-size:28px;transform:rotate(-5deg)}.wait p,.result>p{max-width:420px;margin:0 auto;color:#64776a;line-height:1.6;font-size:12px}
 .result{text-align:center;max-width:620px;margin:auto}.result-icon{transform:none}.result h2{margin:10px 0}.result>p{margin-bottom:17px}.podium{max-width:440px;margin:18px auto 20px}
 footer{height:46px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;color:#8da596;font-size:9px}
@@ -69,16 +69,16 @@ function post(url,data){return api(url,{method:"POST",headers:{"Content-Type":"a
 function renderHome(){
  app.innerHTML='<div class="hero"><div class="eyebrow">Cinco casos · cada quien responde en su móvil</div><h1>Reinicio:<br><span>PC en apuros</span></h1><p class="lead">Resuelve cinco incidencias del taller y consigue que el ordenador vuelva a funcionar. El grupo entra con un enlace y un código de sala.</p></div>'+
  '<div class="panels"><section class="panel"><h2>Presentador</h2><p class="muted">Crea una sala en esta página y comparte el enlace o el código con la clase.</p><button class="primary" data-action="create">Crear sala →</button></section>'+
- '<section class="panel"><h2>Jugador</h2><p class="muted">Escribe el código que aparece en la pantalla del presentador.</p><form id="join-form"><input class="code-input" id="code" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="CÓDIGO" aria-label="Código de sala" value="'+esc(inviteCode)+'" required><input id="name" maxlength="18" autocomplete="nickname" placeholder="Tu nombre o apodo" aria-label="Tu nombre o apodo" required><button class="light" type="submit">Unirme a la partida →</button></form></section></div>'+
+ '<section class="panel"><h2>Jugador</h2><p class="muted">Escribe el código que aparece en la pantalla del presentador.</p><form id="join-form"><input class="code-input" id="code" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="CÓDIGO" aria-label="Código de sala" value="'+esc(inviteCode)+'" required><input id="name" maxlength="18" autocomplete="nickname" placeholder="Tu nombre o apodo" aria-label="Tu nombre o apodo" required><div class="avatar-picker" role="group" aria-label="Elige un avatar"><span class="hint">Elige un avatar</span><div class="avatar-options"><label class="avatar-option"><input type="radio" name="avatar" value="🤖" checked><span>🤖</span></label><label class="avatar-option"><input type="radio" name="avatar" value="👾"><span>👾</span></label><label class="avatar-option"><input type="radio" name="avatar" value="🐱"><span>🐱</span></label><label class="avatar-option"><input type="radio" name="avatar" value="🦊"><span>🦊</span></label><label class="avatar-option"><input type="radio" name="avatar" value="🐸"><span>🐸</span></label><label class="avatar-option"><input type="radio" name="avatar" value="🦖"><span>🦖</span></label></div></div><button class="light" type="submit">Unirme a la partida →</button></form></section></div>'+
  (errorText?'<div class="error" role="alert">'+esc(errorText)+'</div>':"")+
  '<p class="note">La partida se aloja en internet: los móviles pueden usar datos o cualquier Wi-Fi. Usad apodos; solo se guardan el nombre y la puntuación mientras la sala está activa.</p>';
 }
 function playerCards(players,showAnswered){
  if(!players.length)return '<p class="hint">Todavía no se ha unido nadie. Comparte el enlace de la sala.</p>';
- return '<div class="list">'+players.map(function(p){return '<div class="person"><span class="avatar">'+esc((p.name||"?").slice(0,1).toUpperCase())+'</span>'+esc(p.name)+(showAnswered?'<span class="hint">'+(p.answered?"· respondió":"· esperando")+'</span>':"")+'</div>'}).join("")+'</div>';
+ return '<div class="list">'+players.map(function(p){return '<div class="person"><span class="avatar">'+esc(p.avatar||"🤖")+'</span>'+esc(p.name)+(showAnswered?'<span class="hint">'+(p.answered?"· respondió":"· esperando")+'</span>':"")+'</div>'}).join("")+'</div>';
 }
 function scoreList(players){
- return '<div class="score-list">'+players.map(function(p){return '<div class="score"><span class="rank">'+p.rank+'</span><span class="pname">'+esc(p.name)+(p.answered&&state.phase==="playing"?' · respondió':"")+'</span><span class="pts">'+p.score+' pts</span></div>'}).join("")+'</div>';
+ return '<div class="score-list">'+players.map(function(p){return '<div class="score"><span class="rank">'+p.rank+'</span><span class="avatar">'+esc(p.avatar||"🤖")+'</span><span class="pname">'+esc(p.name)+(p.answered&&state.phase==="playing"?' · respondió':"")+'</span><span class="pts">'+p.score+' pts</span></div>'}).join("")+'</div>';
 }
 function timerHtml(id){return '<span class="timer"><span id="'+id+'">15 s</span><span class="track"><span class="fill" id="'+id+'-fill"></span></span></span>'}
 function roundTop(s){var n=Math.max(1,s.questionIndex+1),bars="";for(var i=0;i<s.questionTotal;i++)bars+='<span class="'+(i<n?"done":"")+'"></span>';return '<div class="round-head"><b>Incidencia '+String(n).padStart(2,"0")+' / '+s.questionTotal+'</b><span>'+s.players.length+' jugadores</span></div><div class="progress">'+bars+'</div>'}
@@ -94,7 +94,7 @@ function renderHost(){
  if(s.phase==="lobby"){
   var invite=location.origin+"/?codigo="+encodeURIComponent(s.code);
   return '<section class="card"><div class="room-head"><div><div class="small-label">Sala de espera · código de acceso</div><div class="pin">'+esc(s.code)+'</div></div><span class="tag">Presentador</span></div>'+
-  '<div class="invite"><p>Comparte este enlace; abre la página con el código ya preparado:</p><div class="linkline"><span>'+esc(invite)+'</span><button class="copy" data-action="copy" data-url="'+esc(invite)+'">Copiar enlace</button></div></div>'+
+  '<div class="invite"><p>Comparte este enlace; abre la página con el código ya preparado:</p><div class="linkline"><span>'+esc(invite)+'</span><button class="copy" data-action="copy" data-url="'+esc(invite)+'">Copiar enlace</button></div><div class="qr-row"><img class="qr-code" src="/api/qr?code='+encodeURIComponent(s.code)+'" alt="Código QR para entrar a la sala"><span class="hint">Escanea con la cámara del móvil</span></div></div>'+
   '<div class="row"><h3>Jugadores conectados</h3><span class="count">'+s.playerCount+' '+(s.playerCount===1?"jugador":"jugadores")+'</span></div>'+playerCards(s.players,false)+
   '<div class="actions"><span class="hint">Los móviles pueden estar en redes distintas.</span><button class="primary" data-action="start" '+(s.playerCount?"":"disabled")+'>Empezar partida →</button></div></section>';
  }
@@ -105,7 +105,7 @@ function renderHost(){
 }
 function renderPlayer(){
  var s=state;
- if(s.phase==="lobby")return '<section class="card wait"><div class="wait-icon">⌁</div><div class="small-label">Conectado a la sala '+esc(s.code)+'</div><h2>¡Hola, '+esc(session.name)+'!</h2><p>Espera a que el presentador empiece. La pregunta aparecerá aquí y podrás responder desde tu móvil.</p></section>';
+ if(s.phase==="lobby")return '<section class="card wait"><div class="wait-icon">'+esc(session.avatar||"🤖")+'</div><div class="small-label">Conectado a la sala '+esc(s.code)+'</div><h2>¡Hola, '+esc(session.name)+'!</h2><p>Espera a que el presentador empiece. La pregunta aparecerá aquí y podrás responder desde tu móvil.</p></section>';
  var me=s.players.find(function(p){return p.id===session.playerId});
  if(s.phase==="done")return '<section class="result"><div class="result-icon">'+(s.myRank===1?"✦":"✓")+'</div><div class="small-label">Partida terminada · puesto '+s.myRank+' de '+s.playerCount+'</div><h2>¡Buen trabajo, '+esc(session.name)+'!</h2><p>Tu puntuación final: <strong>'+(me?me.score:0)+' puntos</strong>.</p><div class="podium">'+scoreList(s.players)+'</div><button class="secondary" data-action="home">Salir de la sala</button></section>';
  var locked=s.myAnswer!==null&&s.myAnswer!==undefined,review=s.phase==="review";
@@ -113,7 +113,7 @@ function renderPlayer(){
 }
 function render(){
  if(!session){renderHome();return}
- if(!state){app.innerHTML='<section class="card wait"><div class="wait-icon">⌁</div><h2>Conectando…</h2><p>Estamos recuperando la sala.</p></section>';return}
+ if(!state){app.innerHTML='<section class="card wait"><div class="wait-icon">'+esc(session.avatar||"🤖")+'</div><h2>Conectando…</h2><p>Estamos recuperando la sala.</p></section>';return}
  app.innerHTML=session.role==="host"?renderHost():renderPlayer();updateClock();
 }
 function updateClock(){
@@ -146,9 +146,9 @@ async function createRoom(){
  try{var d=await post("/api/host",{});session={role:"host",code:d.code,key:d.key};save();state=null;signature="";beginPolling()}
  catch(e){errorText=e.message;renderHome()}
 }
-async function joinRoom(code,name){
+async function joinRoom(code,name,avatar){
  errorText="";
- try{var d=await post("/api/join",{code:code,name:name});session={role:"player",code:d.code,playerId:d.playerId,name:d.name};save();state=null;signature="";beginPolling()}
+ try{var d=await post("/api/join",{code:code,name:name,avatar:avatar});session={role:"player",code:d.code,playerId:d.playerId,name:d.name,avatar:d.avatar||avatar};save();state=null;signature="";beginPolling()}
  catch(e){errorText=e.message;renderHome()}
 }
 async function hostPost(path){
@@ -175,7 +175,7 @@ app.addEventListener("click",function(event){
  }
 });
 app.addEventListener("submit",function(event){
- if(event.target&&event.target.id==="join-form"){event.preventDefault();joinRoom(document.getElementById("code").value,document.getElementById("name").value)}
+ if(event.target&&event.target.id==="join-form"){event.preventDefault();var chosen=event.target.querySelector('input[name="avatar"]:checked');joinRoom(document.getElementById("code").value,document.getElementById("name").value,chosen?chosen.value:"🤖")}
 });
 document.addEventListener("keydown",function(event){
  if(session&&session.role==="player"&&state&&state.phase==="playing"&&["1","2","3","4"].indexOf(event.key)>=0)answer(Number(event.key)-1);
