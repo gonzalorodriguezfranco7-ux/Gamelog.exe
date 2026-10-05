@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Juego breve multijugador sobre tarjetas de expansión",
-  "scripts": {
+  "dependencies": {"qrcode": "1.5.4"}, "scripts": {
     "start": "node server.js"
   },
   "engines": {
