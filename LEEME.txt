@@ -1,0 +1,45 @@
+REINICIO: PC EN APUROS — VERSIÓN PARA MÓVILES
+=============================================
+
+Esta versión está preparada para alojarse en internet. Cuando esté publicada,
+cada participante abre el enlace en su móvil, introduce el PIN y responde.
+No hace falta que los dispositivos estén en la misma Wi-Fi ni instalar una app.
+
+PUBLICARLA CON RENDER
+---------------------
+Render publica aplicaciones web mediante un repositorio Git. Necesitas una
+cuenta en Render y conectar un repositorio tuyo (por ejemplo, en GitHub).
+
+1. Descomprime "Juego_movil_global.zip".
+2. Sube todos los archivos y la carpeta "public" a un repositorio Git privado.
+   La carpeta "public" debe quedar al mismo nivel que server.js.
+3. En Render, crea un Blueprint desde ese repositorio para que lea render.yaml.
+   El archivo configura Node, la región de Frankfurt, el plan gratuito y la
+   comprobación de estado. Si lo configuras como Web Service manual, usa los
+   comandos indicados más abajo.
+4. Espera a que termine la publicación. Render te dará una dirección pública
+   que termina en onrender.com.
+5. Abre esa dirección, pulsa "Crear sala" y comparte el enlace o el PIN con
+   quienes van a jugar.
+
+La página usa el puerto que entrega el servicio y no requiere paquetes extra.
+Si configuras el servicio a mano: Build Command "npm install";
+Start Command "npm start".
+
+CÓMO SE JUEGA
+-------------
+- El presentador crea la sala y comparte el enlace con el PIN incorporado.
+- Cada persona entra con su móvil y un nombre o apodo.
+- Hay cinco rondas de 15 segundos y cada acierto suma puntos según la rapidez.
+- El presentador avanza las rondas; al final se muestra la clasificación.
+- El contenido de las preguntas se basa solo en la presentación del grupo.
+
+PRIVACIDAD Y LÍMITES
+--------------------
+- Usad apodos; el juego solo necesita el nombre elegido y la puntuación.
+- Las salas y puntuaciones se guardan en la memoria del servidor mientras esté
+  activo. No hay base de datos.
+- El plan gratuito de Render puede apagar el servicio si queda inactivo y puede
+  reiniciarlo. Si se reinicia durante una partida, la sala se pierde; cread
+  otra sala desde el enlace.
+- No uséis información personal sensible en los nombres.

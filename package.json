@@ -1,0 +1,12 @@
+{
+  "name": "reinicio-pc-en-apuros",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Juego breve multijugador sobre tarjetas de expansión",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

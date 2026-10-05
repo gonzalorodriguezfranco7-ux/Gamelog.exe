@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: reinicio-pc-en-apuros
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
