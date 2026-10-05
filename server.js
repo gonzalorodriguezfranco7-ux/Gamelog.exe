@@ -5,8 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 
-const PORT = Number(process.env.PORT || 10000);
-const INDEX = path.join(__dirname, "public", "index.html");
+const PORT = Number(process.env.PORT || 10000);const INDEX = path.join(__dirname, "public", "public", "public", "public", "index.html", "l");
 const ROUND_MS = 15000;
 let room = null;
 
